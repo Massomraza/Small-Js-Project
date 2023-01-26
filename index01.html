@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .active{
+            color: red;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <ul id="ul">
+        <li>home</li>
+        <li>service</li>
+        <li>about</li>
+    </ul>
+    <button onclick="window.print()">click</button>
+    
+    <form action="" onsubmit="(e)=> e.preventDefault()" id="form">
+        <input type="text" id="name" onchange="onChange(this)">
+        <input type="text" id="age" onchange="onChange(this)">
+        <button type="submit" onclick="demo()">click</button>
+    </form>
+    <button id="button" onclick="para(this) ">click to add para</button>
+
+    <ul id="ul1">
+        <li>home</li>
+        <li>ser</li>
+        <li>kjdkfj</li>
+        <li>kjdkfj</li>
+        <li>kjasdf3423fj</li>
+        <li>kjdkasdfasdffj</li>
+    </ul>
+</body>
+<script>
+    // const ul = document.getElementById('ul')
+    // const demo = document.createElement('li');
+    // const d = '<li>kdkjkjd</li>';
+    // const obj = {
+    //     a: 'kjdkj',
+    //     b: {a: 'kdjk', b: 'kdjfk'}
+    // }
+    // delete obj.b;
+    
+    // if(navigator.onLine){
+    //     document.write('this is online')
+    // }else{
+    //     document.write('this is not online')
+    // }
+    // const txtNode = document.createTextNode('kdkjf');
+    // demo.appendChild(txtNode);
+    // ul.appendChild(demo).setAttribute('class', 'active');
+    // [...ul.children].map((c, i)=>{
+    //     c.setAttribute('class', 'active')
+    //     c.addEventListener('click', (e)=>{
+    //         console.log(e.target.innerHTML = 'kdkjfj')
+    //     })
+    // })
+   
+        // const demo = ()=>{
+        //     let a = document.getElementById('name').name;
+        //     let b = document.getElementById('age').value;
+
+        //     if(!a || !b){
+        //         console.log('kjdk');
+        //     }else{
+        //         a = parseInt(a);
+        //         b = parseInt(a);
+        //         console.log(a+b);
+        //     }
+        // };
+
+       const para = (e)=>{
+        // const para = document.createElement('p');
+        // const txt = document.createTextNode('loremkjdfkjksdafkkj kakdjskfjkjkasjdfj fdkjkf  kfdk fjjd');
+        // para.append(txt);
+        // document.getElementById('button').before(para);
+        // console.log(txt);
+        // const txtNode = document.createTextNode('<li>Home</li>');
+        // document.body.appendChild(txtNode);
+        e.style.visibility = 'hidden';
+       }
+    const ul = document.getElementById('ul1');
+    // [...ul.children].map((c, i)=>{
+    //     if(ul.children.length > 3){
+    //        ul.children.slice(0, 3);
+           
+    //     }else{
+    //         ul.children[4, ul.children.length-1].visibility = 'hidden';
+    //     }
+    // });
+    // const arry = [...ul.children];
+    // arry.map((c, i)=>{
+    //     c.style.color = 'red';
+    //     if(arry.length > 3){
+    //         let a = arry.slice(0, 3)
+           
+    //     }
+    // });
+
+    // const name = '323';
+    // console.log(Math.PI);
+    // console.log(parseInt(name));
+    // console.log('5' + '2');
+
+    var name = 'kjkdsfjaiosejdfikjskd';
+    console.log(name.search('d', 8));
+</script>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text" id="inputBx">
+    <span>
+        <button onclick="add()">Add</button>
+        <button onclick="display()">Display</button>
+    </span>
+    <div id="result">
+
+    </div>
+</body>
+<script>
+    let inputBx = document.querySelector('#inputBx').value;
+    let store = [];
+
+
+    function add() {
+
+        if (inputBx) {
+            store.push(inputBx);
+            console.log(store);
+        } else {
+            alert('Enter something dear');
+        }
+
+        if (store.length >= 1) {
+            for (let x = 0; x < store.length; x++) {
+
+                document.querySelector('#result').innerHTML += `
+                    <p> ${store[x]} Element
+                `
+
+
+            }
+
+        } else {
+            alert('No element is there');
+        }
+    }
+
+    function display() {
+
+        if (store.length >= 1) {
+            for (let x = 0; x < store.length; x++) {
+
+                document.querySelector('#result').innerHTML += `
+                    <p> ${store[x]} Element
+                `
+
+
+            }
+
+        } else {
+            alert('No element is there');
+        }
+    };
+
+
+</script>
+
+</html>

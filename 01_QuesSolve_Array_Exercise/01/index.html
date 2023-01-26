@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Document</title>
+</head>
+<style>
+
+</style>
+
+<body>
+    <div>
+        <input id="arrayOrNot">
+        <button type="text" onclick="checkArrayOrNot()">Check</button>
+        <p id="result"></p>
+    </div>
+</body>
+<script>
+    function checkArrayOrNot() {
+        
+        let value = document.querySelector('#arrayOrNot').value;
+        let result = document.querySelector('#result');
+        try {
+            value = JSON.parse(value);
+            
+        } catch (error) {
+            return false;
+        }
+        
+        if (Array.isArray(value) && value.constructor == Array && value instanceof Array) {
+            result.textContent = 'true';
+        } else {
+            result.textContent = 'false';
+        }
+    }
+
+</script>
+
+</html>

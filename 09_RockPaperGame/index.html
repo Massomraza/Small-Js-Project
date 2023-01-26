@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/09_RockPaperGame/style.css">
+    <script src="https://kit.fontawesome.com/eaa0f9aa7e.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="score">
+            <p>Computer : 
+                <span id="computerScore">0</span>
+            </p>
+            <p>You : 
+                <span id="yourScore">0</span>
+            </p>
+        </div>
+        <div class="weapons">
+            <button onclick="checker('rock')">
+                Rock
+            </button>
+            <button onclick="checker('paper')">
+                Paper
+            </button>
+            <button onclick="checker('scissor')">
+                Scissor               
+            </button>
+        </div>
+        <div class="details">
+            <p id="userChoice"></p>
+            <p id="compChoice"></p>
+            <p id="result"></p>
+        </div>
+    </div>
+</body>
+<script src="/09_RockPaperGame/index.js"></script>
+</html>

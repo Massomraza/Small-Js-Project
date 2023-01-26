@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="inputBx">
+    <p id="result"></p>
+    <button onclick="arrayFun()">Click me</button>
+</body>
+<script>
+    let inputBx = document.querySelector('#inputBx').value;
+    let result = document.querySelector('#result')
+    inputBx = JSON.parse(inputBx);
+
+    function arrayFun(){
+        
+        for(let x = 0; x < inputBx.length; x++){
+
+            console.log('row no. ', x);
+
+            for(let y in inputBx[x]){
+                console.log(inputBx[x][y]);
+            }
+
+        }
+    }
+
+</script>
+</html>

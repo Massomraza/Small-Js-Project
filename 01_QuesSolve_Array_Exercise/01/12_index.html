@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="inputBx">
+    <p id="result"></p>
+    <button onclick="arrayFun()">click me</button>
+</body>
+<script>
+    let inputBx = document.querySelector('#inputBx').value;
+    let result = document.querySelector('#result');
+    
+    function arrayFun(){
+        inputBx = JSON.parse(inputBx);
+        arrayLength = inputBx.length;
+        let sum = 0;
+        let product = 1;
+
+        if(inputBx){
+
+            // while (--arrayLength+1){
+            //     sum += inputBx[arrayLength]
+            //     product *= inputBx[arrayLength];
+                
+            // }
+
+            inputBx.reduce((acc, c, i)=>{
+                sum += c;
+                product *= c;
+            })
+        
+        result.textContent = product;
+        }else{
+            alert('Type something');
+        }
+    };
+
+</script>
+</html>

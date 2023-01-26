@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text" id="arrayBx">
+    <p id="result"></p>
+    <button onclick="arrayFun()">click me</button>
+</body>
+<script>
+    let arrayBx = document.querySelector('#arrayBx').value;
+    let result = document.querySelector('#result');
+
+    function arrayFun(){
+
+        if(arrayBx){
+            arrayBx = JSON.parse(arrayBx);
+            
+            let max = arrayBx[0];
+            let min = arrayBx[0];
+
+            for(let x = 0; x < arrayBx.length; x++){
+                if(max > arrayBx[x]){
+                    console.log(x);
+                    max = arrayBx[x];
+                }
+            }
+
+            console.log(max);
+            // result.textContent = sortt;
+        }else{
+            alert('Enter only no.');
+        }
+
+    }
+
+</script>
+</html>

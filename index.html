@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+    <style>
+        #container{
+            width: 16rem;
+            height: 16rem;
+            background-color: yellow;
+            position: relative;
+        }
+        #animate{
+            width: 3rem;
+            height: 3rem;
+            background-color: red;
+            position: absolute;
+        }
+        .active{
+            color: red;
+        }
+    </style>
+
+<body>
+    <!-- <div class="container">
+        <p class="remove">
+            Click me to remove
+        </p>
+        <div class="createElement">
+
+        </div>
+
+        <div class="clickFunction">
+            <p>Click me to change my color</p>
+        </div> -->
+
+        <!-- <div>
+            <p class="chng">first</p>
+            <p class="chng">second</p>
+            <p class="chng">third</p>
+        </div>
+        <p id="demo"></p>
+    </div> -->
+    
+    <!-- <div id="form-con">
+        <form name="myForm" action="#" onsubmit="return validateForm()">
+            Fname<input type="text" name="fname">
+            <button type="submit">submit</button>
+        </form>
+    </div>
+    <p id="txt">this will change</p>
+    <button onclick="change()">change</button>
+
+    <p id="txt01">
+        this will hide or visible
+    </p>
+    <input type="submit" value="hide" onclick="document.getElementById('txt01').style.visibility= 'hidden'">
+    <input type="submit" value="show" onclick="document.getElementById('txt01').style.visibility = 'visible'">
+
+    <p><button onclick="myMove()">Click me</button></p>
+    <div id="container">
+        <div id="animate"></div>
+    </div>
+
+    <p id="hide" onclick="this.style.visibility = 'hidden'">hide me</p>
+
+    <input type="text" id="upper" onchange="upperCase()">
+    
+    <p id="mouseOver" onmouseover="mOver(this)" onmouseout="mOut(this)">this is me</p>
+
+    <div class="realse">
+        <p onmousedown="mDown(this)" onmouseup="mUp(this)">Change</p>
+    </div>
+
+    <p id="date">click</p>
+
+    <div id="div1">
+       <p id="p1">this is my para</p> 
+    </div>
+    <button onclick="fun()">Click me</button>
+    <div id="d1">
+        <p id="para1">This is a paragaraph</p>
+    </div>
+    <button onclick="fun1()">Click</button> -->
+
+    <!-- <ul id="ul01">
+        <li>home</li>
+    </ul> -->
+    <p id="p1">This will change color </p>
+    <button onclick="animate()">Run</button>
+    
+    <ul id="ul1">
+       
+    </ul>
+
+    <button onclick="anim()">Click me</button>
+    <div id="container">
+        <div id="animate"></div>
+    </div>
+</body>
+<script>
+    'use strict'
+    // const demo = document.querySelector('.container').style = 'color: red';
+    // const demo1 = document.querySelector('.remove'); 
+    // document.querySelector('.remove').addEventListener('click', ()=>{
+    //     demo1.style = 'display: none';
+        
+    // })
+    // console.log(demo);
+
+    // let createElem = document.createElement('a');
+    // createElem.innerHTML = 'masoom';
+    // document.querySelector('.createElement').appendChild(createElem);
+    // console.log(createElem);
+    
+    //     const val = document.querySelectorAll('p.chng')
+    //     document.getElementById('demo').innerHTML = val[0].innerHTML
+    //     console.log(val);
+        // function validateForm (){
+        //     let x = document.forms['myForm']['fname'].value;
+        //     if( !(x >=1 && x <=10)){
+        //         const d = alert('please fill')
+        //         return false
+        //     }
+        // }
+        
+        
+        // function change(){
+        //    document.getElementById('txt').style.color = 'red';
+        // }
+
+        // function myMove(){
+        //    let pos = 0;
+        //     let id = setInterval(frame, 5);
+        //     let elem = document.getElementById('animate');
+            
+        //     function frame(){
+        //         if(pos == 206){
+        //             clearInterval(id);
+        //         }else{
+        //             pos++;
+        //             elem.style.top = pos + 'px';
+        //             elem.style.left = pos + 'px';
+        //         }
+        //     }
+        // }
+        // function upperCase(){
+        //     const x = document.getElementById('upper');
+        //    x.value = x.value.toUpperCase();
+        // }
+
+        // function mOver(obj){
+        //     obj.innerHTML = 'mouseOver';
+        // }
+
+        // function mOut(obj){
+        //     obj.innerHTML = 'mouseOut';
+        // }
+        
+        // function mDown(obj){
+        //     obj.innerHTML = 'this is me';
+        // }
+        // function mUp(obj){
+        //     obj.innerHTML = 'masoom raza';
+        // }
+        // document.getElementById('date').addEventListener('click', ()=>{
+        //     const x = document.getElementById('date');
+        //     x.innerHTML = Date();
+        // });
+
+        // const p = document.createElement('p');
+        // const msg = document.createTextNode('this is new tag');
+        // p.appendChild(msg);
+        // const div = document.getElementById('div1');
+        // div.appendChild(msg);
+        
+        // document.getElementById('p1').remove();
+
+        // function fun(){
+        //     const btn = document.createElement('button');
+        //     btn.innerHTML = 'Plus';
+        //     document.body.appendChild(btn);
+        // };
+
+        // function fun1(){
+        //     const btn = document.createElement('button');
+        //     btn.innerHTML = 'Plus';
+
+        //     let element = document.getElementById('d1');
+        //     let child = docum
+        // }
+
+        // for(let i=0; i < 5; i++){
+        //     const li = document.createElement()
+        //     const txtNode = document.createTextNode('Services' + i);
+        //     li.appendChild(txtNode);
+
+        //     document.querySelector('ul').insertBefore(li);
+        // }
+        function run(){
+            const clas = document.createAttribute('class');
+            clas.value = 'active'
+            document.getElementById('p1').setAttributeNode(clas);
+        }
+
+        for(let i = 0; i < 5; i++){
+            const cElem = document.createElement('li');
+            const txtNode = document.createTextNode('Service ' + i);
+            cElem.appendChild(txtNode);
+            
+            document.getElementById('ul1').appendChild(cElem);
+            cElem.addEventListener('mouseover', (e)=>{
+                e.target.setAttribute('class', 'active');
+            });
+
+            cElem.addEventListener('mouseout', (e)=>{
+                e.target.removeAttribute('class');
+            });
+        }
+        const ul = document.getElementById('ul1');
+
+        const anim = ()=>{
+            const valu = document.getElementById('animate');
+            let pos = 0
+            const id = setInterval(fun, 5);
+
+            function fun(){
+                if(pos == 206){
+                    clearInterval(id);
+                }else{
+                    pos++
+                    valu.style.top = pos + 'px';
+                    valu.style.left = pos + 'px';
+                }
+            }
+        }
+        
+        </script>
+
+</html>

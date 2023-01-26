@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+</head>
+<style>
+
+</style>
+<body>
+    <input type="text" id="arrayIn">
+    <input type="text" id="indx">
+    <p id="result"></p>
+    <button onclick="arrayFun()">click</button>
+</body>
+<script>
+    let arrayIn = document.querySelector('#arrayIn').value;
+    let indx = document.querySelector('#indx').value;
+    let result = document.querySelector('#result');
+    arrayIn = JSON.parse(arrayIn);
+    indx = parseInt(indx);
+
+    function arrayFun(){
+
+        if(!indx){
+            result.textContent = arrayIn.slice(-1);
+        }else{
+            console.log('kjk');
+            result.textContent = arrayIn.slice(-1*indx);
+        }
+    };
+
+
+</script>
+</html>

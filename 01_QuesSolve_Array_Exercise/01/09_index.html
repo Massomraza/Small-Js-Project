@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text" id="textBx">
+    <p id="result"></p>
+    <button onclick="arrayFun()">click me</button>
+</body>
+<script>
+    let textBx = document.querySelector('#textBx').value;
+    let result = document.querySelector('#result');
+    let store = '';
+    function arrayFun() {
+        textBx = textBx.trim();
+        for (let x = 0; x < textBx.length; x++) {
+
+
+
+            if (textBx[x] === textBx[x].toLowerCase()) {
+
+                store += textBx[x].toUpperCase();
+            } else if (textBx[x] === textBx[x].toUpperCase()) {
+
+                store += textBx[x].toLowerCase();
+            }
+
+
+        }
+        result.textContent = store;
+        if (textBx) {
+
+        } else {
+            alert('enter something');
+        }
+    }
+</script>
+
+</html>

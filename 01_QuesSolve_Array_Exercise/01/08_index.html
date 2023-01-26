@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text" id="arrayBx">
+    <p id="result"></p>
+    <button onclick="arrayFun()">Click me</button>
+</body>
+<script>
+    let inputt = document.querySelector('#arrayBx').value;
+    let result = document.querySelector('#result');
+
+    function arrayFun() {
+
+        if (inputt) {
+            let count = 0;
+            let tempCount = 0;
+            let letter;
+            inputt = inputt.toString();
+
+            for(let x = 0; x < inputt.length; x++){
+
+                for(let y = x; y < inputt.length; y++){
+
+                    if(inputt[x] === inputt[y]){
+                        count++;
+                        if(count > tempCount){
+                            tempCount = count;
+                            letter = inputt[x];
+                        }
+                    }
+                }
+
+                count = 0;
+
+            }
+            result.textContent = `${letter} ${tempCount}`
+
+        } else {
+            alert('Enter something');
+        }
+    }
+
+</script>
+
+</html>

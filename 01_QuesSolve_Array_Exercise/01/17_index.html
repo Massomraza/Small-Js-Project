@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text" id="inputBx">
+    <p id="result"></p>
+    <button onclick="arrayFun()">click me</button>
+
+</body>
+<script>
+    let inputBx = document.querySelector('#inputBx').value;
+    let result = document.querySelector('#result');
+
+    function arrayFun() {
+        inputBx = JSON.parse(inputBx);
+
+        if (inputBx) {
+            let store;
+            let index;
+            let temp;
+            let len = inputBx.length
+
+            for (let x = 0; x < len; x++) {
+
+                const rndm = Math.floor(Math.random() * len);
+                
+                temp = inputBx[x];
+                inputBx[x] = inputBx[rndm];
+                inputBx[rndm] = temp;
+
+            }
+
+            console.log(inputBx);
+            result.textContent = store;
+        } else {
+            alert('Enter something first')
+        }
+
+    }
+
+</script>
+
+</html>

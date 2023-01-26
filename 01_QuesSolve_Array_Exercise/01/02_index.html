@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+
+</style>
+<body>
+    <p id="idresult"></p>
+    <input type="text" id="input">
+    <button onclick="fun()">Click me</button>
+</body>
+<script>
+    const result = document.querySelector('#idresult').textContent = fun();
+    function fun(){
+        let a = [1, 2, 4, 0];
+        let c = [...a];
+        
+        const demo = document.querySelector('#input').value;
+        console.log(toString.call(demo));
+        console.log(c);
+        return c;
+    }
+</script>
+</html>

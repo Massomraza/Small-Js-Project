@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text" id="inputBx">
+    <p id="result"></p>
+    <button onclick="arrayFun()">click me</button>
+</body>
+<script>
+    let inputBx = document.querySelector('#inputBx').value;
+    let result = document.querySelector('#result');
+
+    function arrayFun() {
+        inputBx = JSON.parse(inputBx);
+        let store = [];
+        let temp = [];
+        let len = 0;
+
+        
+        
+        if (inputBx) {
+            if (inputBx[0] > inputBx[1]) {
+                len = inputBx[0] - inputBx[1];
+            } else {
+                len = inputBx[1] - inputBx[0];
+            }
+
+
+            for (let x = 0; x < len; x++) {
+                temp.push(inputBx[0] + x);
+
+            }
+            for (x of temp) {
+                console.log(x);
+                if (x % 4 == 0) {
+                    store.push(x);
+                }
+            }
+
+            result.textContent = store;
+        } else {
+
+        }
+    }
+</script>
+
+</html>

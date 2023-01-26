@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+</head>
+<style>
+    
+</style>
+<body>
+    <input type="text" id="arrayBx">
+    <p id="result"></p>
+    <button onclick="arrayFun()">click me</button>
+
+</body>
+<script>
+    let arrayBx = document.querySelector('#arrayBx').value;
+    let result = document.querySelector('#result');
+
+    function arrayFun(){
+        arrayBx = JSON.parse(arrayBx);
+        console.log(arrayBx);
+        result.textContent = arrayBx.join('-');
+        
+    }
+
+</script>
+</html>

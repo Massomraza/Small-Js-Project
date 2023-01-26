@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text" id="inputBx">
+    <p id="result"></p>
+    <button type="submit" onclick="arrayFun()">Click me</button>
+</body>
+<script>
+    let inputBx = document.querySelector('#inputBx').value;
+    const result = document.querySelector('#result');
+
+    function arrayFun() {
+
+        console.log(inputBx);
+
+        if (!Number.isNaN(parseInt(inputBx))) {
+
+            inputBx = inputBx.toString();
+            let finalR = [inputBx[0]];
+            
+            for(let x = 1; x < inputBx.length; x++){
+
+                if(inputBx[x - 1]%2=== 0 && inputBx[x]%2===0){
+                    finalR.push('*', inputBx[x]);
+                }else{
+                    finalR.push(inputBx[x]);
+                }
+            }
+            
+            result.textContent = finalR.join('');
+        } else {
+            alert('Please enter only number');
+        }
+
+    };
+
+</script>
+
+</html>

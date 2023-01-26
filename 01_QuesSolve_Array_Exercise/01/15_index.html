@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text" id="inputBx">
+    <input type="text" id="inputBx1">
+    <div id="result">
+
+    </div>
+    <button onclick="arrayFun()">click me</button>
+</body>
+<script>
+    let inputBx = document.querySelector('#inputBx').value;
+    let inputBx1 = document.querySelector('#inputBx1').value;
+
+    function arrayFun() {
+        inputBx = JSON.parse(inputBx);
+        inputBx1 = JSON.parse(inputBx1);
+        result = document.querySelector('#result');
+
+        if (inputBx && inputBx1) {
+
+
+            for (let x = 0; x < inputBx.length; x++) {
+
+                if (x == 0) {
+                    console.log('testing1');
+                    for (y of inputBx1) {
+                        if (y == 'st') {
+                            result.innerHTML += `
+                            <p>${x + 1}${y} choice is ${inputBx[x]}</p>
+                                `
+
+                        }
+                    }
+
+                } if (x == 1) {
+                    console.log('testing2');
+                    for (y of inputBx1) {
+                        if (y == 'nd') {
+                            result.innerHTML += `
+                                <p>${x + 1}${y} choice is ${inputBx[x]}</p>
+                            `
+                        }
+                    }
+                } if (x == 2) {
+                    console.log('testing3');
+                    for (y of inputBx1) {
+                        if (y == 'rd') {
+                            result.innerHTML += `
+                                <p>${x + 1}${y} choice is ${inputBx[x]}</p>
+                            `
+                        }
+                    }
+
+
+                } if (x > 2) {
+                    console.log('testing4');
+                    for (y of inputBx1) {
+                        if (y == 'th') {
+                            result.innerHTML += `
+                                <p>${x + 1}${y} choice is ${inputBx[x]}</p>`
+                        }
+                    }
+                }
+            }
+
+        } else {
+
+            alert('Please fill all the box');
+
+        }
+    }
+
+
+</script>
+
+</html>

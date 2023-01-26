@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Document</title>
+</head>
+
+<body>
+    <span>
+        <input type="text" id="inputBx">
+        <input type="text" id="valueBx">
+        <button onclick="arrayFun()">click me</button>
+    </span>
+    <p id="result"></p>
+
+</body>
+<script>
+    let inputBx = document.querySelector('#inputBx').value;
+    let valueBx = document.querySelector('#valueBx').value;
+    let resullt = document.querySelector('#result');
+
+    function arrayFun() {
+        if (inputBx && valueBx) {
+            let firstIndex = 0;
+            let lastIndex = inputBx.length - 1;
+            let middlerIndex = Math.floor(lastIndex - firstIndex / 2);
+
+            
+             
+
+            console.log(middlerIndex);
+        } else {
+            alert('Enter something before click');
+        }
+    }
+
+</script>
+
+</html>

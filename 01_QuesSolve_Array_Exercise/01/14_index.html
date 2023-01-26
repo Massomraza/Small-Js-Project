@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+</head>
+
+<body>
+    <input type="text" id="inputBx">
+    <p id="result"></p>
+    <button onclick="arrayFun()">click me</button>
+</body>
+<script>
+    let inputBx = document.querySelector('#inputBx').value;
+    let result = document.querySelector('#result');
+
+    function arrayFun() {
+
+        inputBx = JSON.parse(inputBx);
+        // let store = [];
+        // let temp = [];
+
+        let x,
+            len = inputBx.length,
+            out = [],
+            obj = {};
+
+        if (inputBx) {
+
+            // for (let x = 0; x < inputBx.length; x++) {
+
+            //     for (let y = x + 1; y < inputBx.length; y++) {
+
+            //         if (inputBx[x] == inputBx[y]) {
+            //             inputBx[x] = null;
+            //         }
+
+
+            //     }
+            // }
+
+            // for(let x = 0; x < len; x++){
+
+            //     obj[inputBx[x]] = 0;
+
+            //     for( x in obj){
+            //         out.push(x);
+            //     }
+            //     return out;
+            // }
+
+            for(let x = 0; x < len; x++){
+                obj[inputBx[x]] = 0;
+            };
+
+            for(x in obj){
+                out.push(x);
+            }
+
+           console.log(obj);
+           console.log(out);
+
+
+            result.textContent = out;
+        } else {
+            alert('Enter something');
+        }
+
+    }
+
+</script>
+
+</html>
